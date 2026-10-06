@@ -1,0 +1,35 @@
+.report-locked {
+  text-align: center;
+  padding: 56px 24px;
+}
+
+.report-locked h2 {
+  margin-bottom: 10px;
+}
+
+.report-locked-sub {
+  max-width: 440px;
+  margin: 0 auto 20px;
+}
+
+/* =========================================================
+   PRINT / PDF ONLY
+   Remove question cards from the printed report
+   ========================================================= */
+
+@media print {
+  .obs-report {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 0 22px !important;
+  }
+
+  .obs-report h4,
+  .obs-report p {
+    color: inherit;
+  }
+}
+

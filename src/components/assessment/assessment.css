@@ -1,0 +1,1003 @@
+/* =========================================================
+   QUESTION HEADER
+   Keeps ML / TF badges aligned to the right
+   ========================================================= */
+
+.q-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Question number */
+.q-head .qid {
+  flex: 0 0 auto;
+}
+
+/* Question text */
+.q-head .qtext {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-left: 12px;
+
+  text-align: left !important;
+  justify-content: flex-start !important;
+  align-items: center;
+
+  white-space: normal;
+}
+
+/* ML / TF badges */
+.q-head .q-mini {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 18px;
+}
+
+/* Small grey ML / TF badges */
+
+.q-head .q-mini .mini-badge {
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+
+  height: 24px !important;
+  min-height: 24px !important;
+  max-height: 24px !important;
+
+  padding: 0 9px !important;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border-radius: 6px;
+
+  font-size: 10px !important;
+  line-height: 1 !important;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+/* Chevron */
+.q-head .chev {
+  flex: 0 0 16px;
+  margin-left: 12px;
+}
+
+
+/* =========================================================
+   GUIDANCE / RISK LEVEL TABLE
+   ========================================================= */
+
+table.rep .badge {
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+
+  height: 28px;
+  min-height: 28px;
+
+  padding: 3px 10px !important;
+
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border-radius: 6px;
+
+  font-size: 10.5px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.guidance-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--soft);
+  border: 1px solid var(--line-strong);
+  color: var(--brand);
+  border-radius: 8px;
+  padding: 9px 15px;
+  font-size: 13px;
+  font-weight: 700;
+  flex: none;
+}
+.guidance-btn:hover {
+  background: #eef2f7;
+  border-color: var(--brand);
+}
+
+/* =========================================================
+   ASSESSMENT ML / TF LEVEL CONTROL
+   ========================================================= */
+
+.block .row select {
+  height: 40px;
+  box-sizing: border-box;
+  padding: 7px 10px;
+}
+.block .row .ev-chip {
+  height: 39px;
+  box-sizing: border-box;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.block .row .badge {
+  width: 95px !important;
+  min-width: 95px !important;
+  max-width: 95px !important;
+
+  height: 39px !important;
+  min-height: 39px !important;
+
+  padding: 0 10px !important;
+
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+
+
+/* =========================================================
+   BRA - IMPACT × PROBABILITY MATRIX RIGHT DRAWER
+   ========================================================= */
+
+/* ---------- Overlay ---------- */
+
+.bra-matrix-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.35);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+
+  opacity: 1;
+  visibility: visible;
+
+  z-index: 9998;
+}
+
+
+/* ---------- Right drawer ---------- */
+
+.bra-matrix-drawer {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 520px;
+  max-width: 92vw;
+
+  height: 100vh;
+
+  background: var(--card, #ffffff);
+
+  box-shadow: -8px 0 32px rgba(15, 23, 42, 0.18);
+
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  animation: braMatrixDrawerIn 0.22s ease-out;
+}
+
+
+/* ---------- Drawer animation ---------- */
+
+@keyframes braMatrixDrawerIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+/* ---------- Header ---------- */
+
+.bra-matrix-head {
+  flex: none;
+
+  min-height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 20px;
+
+  background: var(--brand, #17375e);
+  color: #ffffff;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.bra-matrix-head h3 {
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 1.35;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+
+.bra-matrix-close {
+  width: 32px;
+  height: 32px;
+
+  flex: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+
+.bra-matrix-close:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+
+.bra-matrix-close:active {
+  transform: scale(0.96);
+}
+
+
+/* ---------- Body ---------- */
+
+.bra-matrix-body {
+  flex: 1;
+
+  padding: 22px 20px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background: var(--card, #ffffff);
+}
+
+
+/* ---------- Table ---------- */
+
+.bra-matrix-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+
+.bra-matrix-table {
+  width: 100%;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  table-layout: fixed;
+
+  font-size: 11.5px;
+}
+
+
+.bra-matrix-table th,
+.bra-matrix-table td {
+  border: 1px solid var(--line, #dfe5ec);
+
+  padding: 7px;
+
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+.bra-matrix-table thead th {
+  background: var(--soft, #f5f7fa);
+
+  color: var(--brand, #17375e);
+
+  font-size: 10.5px;
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+
+.bra-matrix-table tbody th {
+  background: var(--soft, #f5f7fa);
+
+  color: var(--brand, #17375e);
+
+  font-size: 10.5px;
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+
+.bra-matrix-table td {
+  font-size: 11.5px;
+  color: var(--ink, #25344a);
+}
+
+
+.matrix-number {
+  display: inline;
+  font-weight: 700;
+}
+
+.matrix-number::after {
+  content: " - ";
+}
+
+.matrix-label {
+  display: inline;
+  margin-top: 0;
+
+  font-size: 10.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+/* .matrix-number {
+  display: block;
+
+  font-weight: 700;
+}
+
+
+.matrix-label {
+  display: block;
+
+  margin-top: 2px;
+
+  font-size: 9.5px;
+  font-weight: 600;
+} */
+
+
+/* ---------- Matrix colours ---------- */
+
+.bra-matrix-table td.matrix-c1 {
+  background: #e6f4ec;
+}
+
+
+.bra-matrix-table td.matrix-c2 {
+  background: #f3f6e3;
+}
+
+
+.bra-matrix-table td.matrix-c3 {
+  background: #fbeede;
+}
+
+
+.bra-matrix-table td.matrix-c4 {
+  background: #f9e6df;
+}
+
+
+.bra-matrix-table td.matrix-c5 {
+  background: #f7e1e1;
+
+  font-weight: 700;
+}
+
+
+/* ---------- Risk bands ---------- */
+
+.bra-band-legend {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+
+  margin-top: 16px;
+}
+
+
+.bra-band-item {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  min-height: 34px;
+
+  font-size: 12.5px;
+  color: var(--ink, #25344a);
+}
+
+
+.bra-band-badge {
+  width: 52px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 5px;
+
+  border-radius: 6px;
+
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  flex: none;
+}
+
+
+.bra-band-high {
+  background: #b52a24;
+}
+
+
+.bra-band-medhigh {
+  background: #c4491c;
+}
+
+
+.bra-band-med {
+  background: #c95b19;
+}
+
+
+.bra-band-lowmed {
+  background: #7c9627;
+}
+
+
+.bra-band-low {
+  background: #2f8b5c;
+}
+
+
+/* ---------- Explanation ---------- */
+
+.bra-matrix-note {
+  margin-top: 14px;
+
+  color: var(--muted, #657892);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+.bra-matrix-formula {
+  margin-top: 18px;
+}
+
+
+.bra-matrix-note strong {
+    color: var(--muted);
+}
+
+/* =========================================================
+   REVIEW & SUBMIT ASSESSMENT MODAL
+   ========================================================= */
+
+.submit-review-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px;
+
+  background: rgba(15, 23, 42, 0.42);
+  backdrop-filter: blur(2px);
+}
+
+.submit-review-modal {
+  width: min(995px, 100%);
+  max-height: 92vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--card);
+  border-radius: 14px;
+
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.30);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   MODAL HEADER
+   ========================================================= */
+
+.submit-review-head {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  padding: 20px 24px;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.submit-review-head h3 {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  color: var(--ink);
+}
+
+.submit-review-sub {
+  margin-top: 4px;
+
+  font-size: 12px;
+
+  color: var(--muted);
+}
+
+.submit-review-close {
+  width: 32px;
+  height: 32px;
+
+  flex: 0 0 32px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: var(--soft);
+  color: var(--muted);
+
+  cursor: pointer;
+}
+
+.submit-review-close:hover {
+  background: #eef2f7;
+  color: var(--ink);
+}
+
+
+/* =========================================================
+   MODAL BODY
+   ========================================================= */
+
+.submit-review-body {
+  flex: 1 1 auto;
+  min-height: 0;
+
+  overflow-y: auto;
+
+  padding: 24px;
+}
+
+.review-report-card {
+  margin: 0;
+}
+
+
+/* =========================================================
+   MODAL FOOTER
+   ========================================================= */
+
+.submit-review-foot {
+  flex: 0 0 auto;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 18px 24px;
+
+  border-top: 1px solid var(--line);
+
+  background: var(--card);
+}
+
+
+/* =========================================================
+   REVIEW CONTENT
+   ========================================================= */
+
+.review-section-title {
+  margin: 20px 0 10px !important;
+
+  font-size: 15px !important;
+}
+
+.review-dimension {
+  margin-top: 18px;
+}
+
+.review-dimension > h3 {
+  margin: 0 0 7px;
+
+  font-size: 13px;
+
+  color: var(--brand);
+}
+
+.obs-report {
+  margin-bottom: 10px;
+
+  padding: 12px 14px;
+
+  background: var(--soft);
+
+  border: 1px solid var(--line);
+
+  border-radius: 8px;
+}
+
+.obs-report h4 {
+  margin: 0 0 5px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  color: var(--ink);
+}
+
+.obs-report p {
+  margin: 0 0 10px;
+
+  font-size: 12px;
+  line-height: 1.5;
+
+  color: var(--muted);
+}
+
+.obs-report p:last-child {
+  margin-bottom: 0;
+}
+
+.review-ev {
+  margin-left: 6px;
+
+  color: var(--muted);
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   REVIEW REPORT — GAUGE AREA
+   ========================================================= */
+
+/*
+   Important:
+   The gauge must use the FULL width available inside
+   the report card.
+
+   Do NOT use width:auto here.
+*/
+
+.submit-review-modal .rep-card .gauge-box {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+
+  height: auto !important;
+  min-height: 0 !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border: 0 !important;
+  border-radius: 0 !important;
+
+  background: transparent !important;
+  box-shadow: none !important;
+
+  display: flex !important;
+  flex-direction: column;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   GAUGE SVG
+   ========================================================= */
+
+.submit-review-modal .rep-card .gauge-svg {
+  width: 165px !important;
+  max-width: 165px !important;
+  height: auto !important;
+
+  display: block !important;
+
+  margin: 0 auto !important;
+
+  flex: 0 0 auto;
+}
+
+
+/* =========================================================
+   HIDE GAUGE'S INTERNAL CAPTION
+   ========================================================= */
+
+/*
+   The Review & Submit card already has its own title,
+   so we don't need Gauge.jsx's caption here.
+*/
+
+.submit-review-modal .rep-card .gauge-caption {
+  display: none !important;
+}
+
+
+/* =========================================================
+   RISK BADGE UNDER GAUGE
+   Content-sized — NOT fixed width
+   ========================================================= */
+
+.submit-review-modal .rep-card > .badge {
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+
+  height: 28px !important;
+  min-height: 28px !important;
+  max-height: 28px !important;
+
+  margin: 2px auto 0 !important;
+
+  padding: 0 10px !important;
+
+  display: inline-flex !important;
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  flex: 0 0 auto;
+}
+
+
+/* =========================================================
+   REVIEW REPORT CARD — CENTER GAUGE CONTENT
+   ========================================================= */
+
+.submit-review-modal .rep-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  box-sizing: border-box;
+}
+
+
+/*
+   If the gauge sits inside a dedicated visual area,
+   make that area center its contents as well.
+*/
+
+.submit-review-modal .rep-card .gauge-box,
+.submit-review-modal .rep-card .gauge-box svg {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .submit-review-overlay {
+    padding: 8px;
+  }
+
+  .submit-review-modal {
+    width: 100%;
+    max-height: 96vh;
+
+    border-radius: 10px;
+  }
+
+  .submit-review-head {
+    padding: 16px;
+  }
+
+  .submit-review-body {
+    padding: 16px;
+  }
+
+  .submit-review-foot {
+    padding: 14px 16px;
+  }
+
+  .submit-review-modal .rep-card .gauge-svg {
+    width: 150px !important;
+    max-width: 150px !important;
+  }
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 640px) {
+  .bra-matrix-drawer {
+    width: 100vw;
+    max-width: 100vw;
+  }
+
+  .bra-matrix-head {
+    padding: 15px 16px;
+  }
+
+  .bra-matrix-body {
+    padding: 18px 14px;
+  }
+
+  .bra-matrix-table {
+    min-width: 440px;
+  }
+}
+
+
+/* =========================================================
+   CONCLUSION SECTION
+   ========================================================= */
+
+.conclusion-field {
+  margin-top: 14px;
+}
+
+.conclusion-field textarea {
+  min-height: 220px;
+  resize: vertical;
+}
+
+/* =========================================================
+   FULL REPORT - RISK SUMMARY
+   ========================================================= */
+
+.rep-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.rep-card .gauge-box {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+
+  display: flex !important;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: center !important;
+
+  box-sizing: border-box;
+}
+
+.rep-card .gauge-svg {
+  width: 165px !important;
+  max-width: 165px !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.rep-card .gauge-caption {
+  display: none !important;
+}
+
+.rep-card > .badge {
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: max-content !important;
+
+  height: 28px !important;
+  min-height: 28px !important;
+  max-height: 28px !important;
+
+  margin: 2px auto 0 !important;
+  padding: 0 10px !important;
+
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border-radius: 6px;
+
+  font-size: 10px !important;
+  font-weight: 700;
+  line-height: 1;
+
+  white-space: nowrap;
+
+  flex: 0 0 auto !important;
+}
+
+.rep-card .gauge-box,
+.rep-card .gauge-box svg {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}

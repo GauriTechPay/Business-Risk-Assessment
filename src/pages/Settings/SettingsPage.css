@@ -1,0 +1,131 @@
+/* =========================================================
+   FULL PAGE SETTINGS
+   ========================================================= */
+
+.settings-page {
+  padding: 20px 24px 32px;
+  background: var(--bg);
+  min-height: calc(100vh - 72px);
+  overflow-y: auto;
+}
+
+/* Settings cards */
+
+.settings-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 24px 24px 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+}
+
+/* Section label */
+
+.settings-eyebrow {
+  color: var(--brand);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+/* Heading */
+
+.settings-card h2 {
+  margin-bottom: 4px;
+  color: var(--ink);
+  font-size: 18px;
+
+}
+
+/* Description */
+
+.settings-description {
+     color: var(--muted);
+    font-size: 12.5px;
+    margin-bottom: 16px;
+}
+
+/* Profile */
+
+.settings-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.settings-field {
+  min-width: 0;
+}
+
+.settings-field label {
+  display: block;
+    margin-bottom: 5px;
+    color: var(--ink);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.settings-input {
+  width: 100%;
+    min-height: 40px;
+    padding: 9px 11px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    color: var(--ink);
+    font-size: 13px;
+}
+
+/* Notification options */
+
+.settings-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.settings-checkbox-row {
+  display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.settings-checkbox-row input {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: #1677e8;
+  cursor: pointer;
+}
+
+/* Configure button */
+
+.settings-configure-btn {
+  min-height: 40px;
+  padding: 0 18px;
+
+  background: #fff;
+  color: var(--brand);
+
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.settings-configure-btn:hover {
+  background: var(--soft);
+  border-color: var(--brand);
+}

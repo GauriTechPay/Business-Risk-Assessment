@@ -1,0 +1,16 @@
+BRA Project — Business Risk Assessment
+
+Architecture:
+src/app/                 application shell and route registry
+src/components/common/   shared UI primitives
+src/components/layout/   global navigation and top bar
+src/components/assessment/ assessment-specific reusable UI
+src/components/admin/    admin-specific reusable UI
+src/pages/               route-level containers, grouped by domain
+src/context/             application state/provider
+src/data/                demo/reference data
+src/utils/               risk calculation helpers
+src/styles/              application styling
+
+Admin UI has been split from the former monolithic AdminPages.jsx into route pages and reusable admin components.
+The project remains a frontend-only demo with in-memory state; API/auth/database/audit persistence can be added behind the existing feature boundaries.
